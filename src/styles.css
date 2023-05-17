@@ -1,3 +1,5 @@
+/* Default / home.js styling */
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -15,7 +17,7 @@ body {
     background-image: url('./images/pizza.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 97vh;
+    height: 96vh;
 }
 
 .overlay {
@@ -52,11 +54,25 @@ body {
 }
 
 .navbar ul li {
+    list-style: none;
+}
+
+.navbar li a {
     color: white;
     list-style: none;
     margin: 10px;
     font-size: 1.5rem;
     font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar li:hover,
+.navbar li a:hover {
+    transform: translateY(-10px);
+    color: darkorange;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .intro-container {
@@ -68,8 +84,8 @@ body {
     background-color: rgba(0, 0, 0, 0.774);
     border: 2px solid black;
     border-radius: 8px;
-    height: 600px;
-    width: 500px;
+    height: 70%;
+    width: 30%;
     z-index: 22;
 }
 
@@ -86,10 +102,11 @@ body {
 
 .chef-img {
     display: flex;
-    flex: 1;
     justify-content: center;
+    height: 65%;
+    width: 80%;
     border-radius: 50%;
-    transform: scale(0.8);
+    transform: scale(1);
     margin: auto;
     margin-bottom: 30px;
 }
@@ -101,5 +118,31 @@ footer {
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.808);
     text-align: center;
-    height: 3vh;
+    height: 4vh;
+}
+
+.github {
+    height: 30px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.github:hover {
+    filter: invert();
+}
+
+/* menu.js styling */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.774);
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 70%;
+    width: 80%;
+    z-index: 22;
 }
