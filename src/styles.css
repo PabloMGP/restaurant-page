@@ -1,4 +1,4 @@
-/* Default / home.js styling */
+/* Default / home page styling */
 
 * {
     box-sizing: border-box;
@@ -8,6 +8,7 @@
 body {
     margin: 0 auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: none;
 }
 
 .background {
@@ -17,13 +18,13 @@ body {
     background-image: url('./images/pizza.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 96vh;
+    height: 95vh;
 }
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.808);
-    height: 200px;
-    width: 100vw;
+    height: 20%;
+    width: 100%;
     z-index: 20;
 }
 
@@ -32,20 +33,20 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 200px;
+    height: 100%;
+    width: 100%;
 }
 
 .logo {
-    display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     background-image: url('./images/logo.png');
     z-index: 22;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 300px;
-    width: 300px;
-    margin-top: 30px;
+    height: 350px;
+    width: 150px;
+    margin-top: 20px;
 }
 
 .navbar ul {
@@ -60,7 +61,7 @@ body {
 .navbar li a {
     color: white;
     list-style: none;
-    margin: 10px;
+    margin-bottom: 10px;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px;
@@ -84,7 +85,7 @@ body {
     background-color: rgba(0, 0, 0, 0.774);
     border: 2px solid black;
     border-radius: 8px;
-    height: 70%;
+    height: 50%;
     width: 30%;
     z-index: 22;
 }
@@ -103,12 +104,10 @@ body {
 .chef-img {
     display: flex;
     justify-content: center;
-    height: 65%;
-    width: 80%;
+    height: 50%;
+    width: 50%;
     border-radius: 50%;
-    transform: scale(1);
-    margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 footer {
@@ -118,11 +117,11 @@ footer {
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.808);
     text-align: center;
-    height: 4vh;
+    height: 5vh;
 }
 
 .github {
-    height: 30px;
+    height: 25px;   
     margin: 0 5px;
     background-color: white;
     border-radius: 50%;
@@ -132,17 +131,138 @@ footer {
     filter: invert();
 }
 
-/* menu.js styling */
+/* menu page styling */
 .menu-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.774);
     border: 2px solid black;
     border-radius: 8px;
     height: 70%;
-    width: 80%;
+    max-width: 80%;
     z-index: 22;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1 1 40%;
+    gap: 10px;
+    margin: 15px;
+}
+
+.menu-item-img {
+    background-image: url('./images/pepperoni_pizza.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    border-radius: 12px;
+}
+
+.menu-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+.menu-item-title {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item-description {
+    color: white;
+    margin-top: 10px;
+    padding: 0;
+}
+
+/* contact Page Styling */
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 20px;
+    width: 90%;
+    height: 90%;
+    margin: 0;
+}
+
+.row-one,
+.row-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.25rem;
+    gap: 10px;
+}
+
+.phone-img {
+    display: block;
+    background-image: url('./images/phone.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px;
+    border-radius: 50%;
+    background-size:cover;
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+}
+
+.address-img {
+    display: block;
+    background-image: url('./images/address.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px;
+    border-radius: 50%;
+    background-size:cover;
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+}
+
+/* Disabled for simplicity */
+/* .map-img {
+    display: flex;
+    flex: 1 1 100%;
+    background-image: url('./images/map.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300%;
+    height: 120%;
+} */
+
+@media screen and (max-height: 600px) {
+    .logo {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .intro-container {
+        min-width: 90%;;
+    }
+    .menu-item {
+        margin: 10px;
+    }
+    .menu-item-img {
+        height: 100px;
+        width: 100px;
+    }
 }

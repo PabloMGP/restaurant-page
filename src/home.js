@@ -1,4 +1,5 @@
 import { renderMenuPage } from './menu';
+import { renderContactPage } from './contact';
 
 export function renderHomePage() {
   // Reset container contents
@@ -50,7 +51,7 @@ export function renderHomePage() {
   introMessage.classList.add('intro-message');
   introMessage.textContent = 'Made with 100% locally sourced ingredients';
   chefImg.classList.add('chef-img');
-  chefImg.setAttribute('src', '../src/images/chef.jpg');
+  chefImg.setAttribute('src', './images/chef.jpg');
 
   // Background Flex Render
   content.appendChild(background);
@@ -83,8 +84,6 @@ export function renderHomePage() {
   introWrapper.appendChild(introMessage);
   introContainer.appendChild(chefImg);
 
-  console.log('home page rendered');
-
   // Event Listeners for Nav Bar
   const menuBtn = document.querySelector('.menu');
   menuBtn.addEventListener('click', () => {
@@ -94,5 +93,10 @@ export function renderHomePage() {
   const homeBtn = document.querySelector('.home');
   homeBtn.addEventListener('click', () => {
     renderHomePage();
+  });
+
+  const contactBtn = document.querySelector('.contact');
+  contactBtn.addEventListener('click', () => {
+    renderContactPage();
   });
 }
